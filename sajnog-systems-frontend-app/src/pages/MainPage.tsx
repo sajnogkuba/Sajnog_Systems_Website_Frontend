@@ -1,78 +1,23 @@
+import ContactPage from "./ContactPage";
+import HomePage from "./HomePage";
+import ProcessPage from "./ProcessPage";
+import AboutUsPage from "./AboutUsPage";
+
 const MainPage = () => {
     return (
-        <div className='bg-mint-500 bg-black'>
-            <h1 className='text-3xl font-bold underline'>Witaj na stronie głównej!</h1>
-            <p>To jest przykładowa strona główna Twojej aplikacji.</p>
-            <p>Możesz tutaj umieścić dowolne informacje lub komponenty.</p>
-            <button className="rounded-xl bg-main text-on-main px-4 py-2 hover:opacity-90">
-                Kliknij
-            </button>
-            <h1 className='text-3xl font-bold underline'>Witaj na stronie głównej!</h1>
-            <p>To jest przykładowa strona główna Twojej aplikacji.</p>
-            <p>Możesz tutaj umieścić dowolne informacje lub komponenty.</p>
-            <button className="rounded-xl bg-main text-on-main px-4 py-2 hover:opacity-90">
-                Kliknij
-            </button>
-            <h1 className='text-3xl font-bold underline'>Witaj na stronie głównej!</h1>
-            <p>To jest przykładowa strona główna Twojej aplikacji.</p>
-            <p>Możesz tutaj umieścić dowolne informacje lub komponenty.</p>
-            <button className="rounded-xl bg-main text-on-main px-4 py-2 hover:opacity-90">
-                Kliknij
-            </button>
-            <h1 className='text-3xl font-bold underline'>Witaj na stronie głównej!</h1>
-            <p>To jest przykładowa strona główna Twojej aplikacji.</p>
-            <p>Możesz tutaj umieścić dowolne informacje lub komponenty.</p>
-            <button className="rounded-xl bg-main text-on-main px-4 py-2 hover:opacity-90">
-                Kliknij
-            </button>
-            <h1 className='text-3xl font-bold underline'>Witaj na stronie głównej!</h1>
-            <p>To jest przykładowa strona główna Twojej aplikacji.</p>
-            <p>Możesz tutaj umieścić dowolne informacje lub komponenty.</p>
-            <button className="rounded-xl bg-main text-on-main px-4 py-2 hover:opacity-90">
-                Kliknij
-            </button>
-            <h1 className='text-3xl font-bold underline'>Witaj na stronie głównej!</h1>
-            <p>To jest przykładowa strona główna Twojej aplikacji.</p>
-            <p>Możesz tutaj umieścić dowolne informacje lub komponenty.</p>
-            <button className="rounded-xl bg-main text-on-main px-4 py-2 hover:opacity-90">
-                Kliknij
-            </button>
-            <h1 className='text-3xl font-bold underline'>Witaj na stronie głównej!</h1>
-            <p>To jest przykładowa strona główna Twojej aplikacji.</p>
-            <p>Możesz tutaj umieścić dowolne informacje lub komponenty.</p>
-            <button className="rounded-xl bg-main text-on-main px-4 py-2 hover:opacity-90">
-                Kliknij
-            </button>
-            <h1 className='text-3xl font-bold underline'>Witaj na stronie głównej!</h1>
-            <p>To jest przykładowa strona główna Twojej aplikacji.</p>
-            <p>Możesz tutaj umieścić dowolne informacje lub komponenty.</p>
-            <button className="rounded-xl bg-main text-on-main px-4 py-2 hover:opacity-90">
-                Kliknij
-            </button>
-            <h1 className='text-3xl font-bold underline'>Witaj na stronie głównej!</h1>
-            <p>To jest przykładowa strona główna Twojej aplikacji.</p>
-            <p>Możesz tutaj umieścić dowolne informacje lub komponenty.</p>
-            <button className="rounded-xl bg-main text-on-main px-4 py-2 hover:opacity-90">
-                Kliknij
-            </button>
-            <h1 className='text-3xl font-bold underline'>Witaj na stronie głównej!</h1>
-            <p>To jest przykładowa strona główna Twojej aplikacji.</p>
-            <p>Możesz tutaj umieścić dowolne informacje lub komponenty.</p>
-            <button className="rounded-xl bg-main text-on-main px-4 py-2 hover:opacity-90">
-                Kliknij
-            </button>
-            <h1 className='text-3xl font-bold underline'>Witaj na stronie głównej!</h1>
-            <p>To jest przykładowa strona główna Twojej aplikacji.</p>
-            <p>Możesz tutaj umieścić dowolne informacje lub komponenty.</p>
-            <button className="rounded-xl bg-main text-on-main px-4 py-2 hover:opacity-90">
-                Kliknij
-            </button>
-            <h1 className='text-3xl font-bold underline'>Witaj na stronie głównej!</h1>
-            <p>To jest przykładowa strona główna Twojej aplikacji.</p>
-            <p>Możesz tutaj umieścić dowolne informacje lub komponenty.</p>
-            <button className="rounded-xl bg-main text-on-main px-4 py-2 hover:opacity-90">
-                Kliknij
-            </button>
+        <div className='bg-primary'>
+            <section id="home" className="h-screen flex items-center justify-center">
+                <HomePage/>
+            </section>
+            <section id="about" className="h-screen flex items-center justify-center">
+                <AboutUsPage/>
+            </section>
+            <section id="process" className="h-screen flex items-center justify-center">
+                <ProcessPage/>
+            </section>
+            <section id="contact" className="h-screen flex items-center justify-center">
+                <ContactPage/>
+            </section>
         </div>
     );
 }

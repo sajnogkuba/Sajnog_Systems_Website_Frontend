@@ -1,10 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: oklch(0.3442 0.2343 265.24);
-    --color-secondary: oklch(0.8267 3.1381 29.12);
+    --color-primary: oklch(27.9% 0.041 260.031);
     --color-navbarbg: oklch(0.9999 0.0001 0);
+    --color-secondary: oklch(98.5% 0.001 106.423);
+    --color-additional: oklch(70.7% 0.022 261.325);
+    --color-accent: oklch(68.1% 0.162 75.834);
 }
 body {
     background: black;
+}
+
+html {
+    scroll-behavior: smooth;
 }
