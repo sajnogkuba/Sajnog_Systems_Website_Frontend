@@ -8,7 +8,7 @@
     --color-accent: oklch(68.1% 0.162 75.834);
 }
 body {
-    background: black;
+    background: oklch(27.9% 0.041 260.031);
 }
 
 html {

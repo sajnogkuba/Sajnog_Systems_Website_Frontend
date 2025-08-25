@@ -31,10 +31,10 @@ const Navbar: React.FC = () => {
 
                 {/* Linki */}
                 <div className="hidden items-center gap-1 md:flex">
-                    <NavLink href="#home">Home</NavLink>
-                    <NavLink href="#about">O Nas</NavLink>
-                    <NavLink href="#process">Proces</NavLink>
-                    <NavLink href="#contact">Kontakt</NavLink>
+                    <NavLink href="/#home">Home</NavLink>
+                    <NavLink href="/#about">O Nas</NavLink>
+                    <NavLink href="/#process">Proces</NavLink>
+                    <NavLink href="/#contact">Kontakt</NavLink>
                 </div>
             </nav>
         </header>

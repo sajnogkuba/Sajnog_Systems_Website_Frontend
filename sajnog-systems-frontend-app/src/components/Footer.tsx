@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <Warehouse className="h-6 w-6"/>
-                                    <span>Dobczyn, pow. wołomiński</span>
+                                    <span>05-205 Dobczyn, pow. wołomiński</span>
                                 </li>
                             </ul>
                         </div>
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
                 <div
                     className="mt-10 pb-8 border-t border-on-surface/10 border-additional pt-6 flex flex-col items-center justify-between gap-4 text-xs sm:flex-row">
                     <p className='text-additional'>© 2025 Sajnóg-Systems. Wszelkie prawa zastrzeżone.</p>
-                    <a href="#" className="text-additional">Polityka prywatności</a>
+                    <a href="/privacy" className="text-additional">Polityka prywatności</a>
                 </div>
             </div>
         </footer>

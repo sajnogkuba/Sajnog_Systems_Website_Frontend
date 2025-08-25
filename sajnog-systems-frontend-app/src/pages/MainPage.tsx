@@ -5,17 +5,17 @@ import AboutUsPage from "./AboutUsPage";
 
 const MainPage = () => {
     return (
-        <div className='bg-primary'>
+        <div className='bg-white'>
             <section id="home" className="h-screen flex items-center justify-center">
                 <HomePage/>
             </section>
             <section id="about" className="h-screen flex items-center justify-center">
                 <AboutUsPage/>
             </section>
-            <section id="process" className="h-screen flex items-center justify-center">
+            <section id="process" className="flex items-start justify-center">
                 <ProcessPage/>
             </section>
-            <section id="contact" className="h-screen flex items-center justify-center">
+            <section id="contact" className="flex items-start justify-center">
                 <ContactPage/>
             </section>
         </div>
