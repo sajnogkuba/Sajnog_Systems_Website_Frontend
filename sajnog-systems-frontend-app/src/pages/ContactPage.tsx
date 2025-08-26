@@ -3,8 +3,8 @@ import { Mail, Phone, Warehouse } from "lucide-react";
 
 const ContactPage: React.FC = () => {
     return (
-        <div className="bg-primary py-12 px-4 w-screen">
-            <div className="flex flex-wrap justify-center items-start gap-10">
+        <div className="bg-additional py-12 px-4 w-screen">
+            <div className="flex flex-wrap justify-center items-start gap-10 mt-12">
 
                 {/* Lewa kolumna */}
                 <div className="flex flex-col gap-10 w-full max-w-2xl my-auto">
@@ -57,16 +57,20 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 {/* Prawa kolumna */}
-                <div className="w-full max-w-2xl rounded-lg bg-white/90 p-8 shadow-lg outline-accent outline-4">
-                    <h2 className="mb-8 text-left text-4xl font-bold text-accent">
-                        Umów konsultację
-                    </h2>
-                    <ContactForm/>
-                </div>
 
+
+                <div className="w-full max-w-2xl rounded-lg bg-white/90 p-8 shadow-lg outline-accent outline-4">
+                    <section id="contactform" className="scroll-mt-30">
+                        <h2 className="mb-4 text-left text-4xl font-bold text-accent">
+                            Umów konsultację
+                        </h2>
+                        <ContactForm/>
+                    </section>
+                </div>
             </div>
         </div>
-    );
+    )
+        ;
 };
 
 export default ContactPage;

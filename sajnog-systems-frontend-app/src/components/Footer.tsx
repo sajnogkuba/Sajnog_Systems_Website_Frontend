@@ -2,7 +2,7 @@ import {Mail, Phone, Warehouse} from "lucide-react";
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-primary border-t-6 border-secondary text-secondary pt-12">
+        <footer className="bg-primary border-t-6 border-accent text-secondary pt-12">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                     {/* Główna sekcja w 4 kolumnach */}
@@ -46,14 +46,14 @@ const Footer: React.FC = () => {
                         <div>
                             <h3 className="mb-3 text-lg font-semibold">Oferta</h3>
                             <ul className="list-disc pl-5 space-y-3 text-sm">
-                                <li className="hover:text-accent transition-colors duration-300 ease-in-out">
-                                    <a href="#cct">Systemy CCTV</a>
+                                <li className="transition-colors duration-300 ease-in-out">
+                                    <p>Systemy CCTV</p>
                                 </li>
-                                <li className="hover:text-accent transition-colors duration-300 ease-in-out">
-                                    <a href="#sswin">Systemy alarmowe</a>
+                                <li className="transition-colors duration-300 ease-in-out">
+                                    <p>Systemy alarmowe</p>
                                 </li>
-                                <li className="hover:text-accent transition-colors duration-300 ease-in-out">
-                                    <a href="#sswin">Systemy kontroli dostępu</a>
+                                <li className="transition-colors duration-300 ease-in-out">
+                                    <p>Systemy kontroli dostępu</p>
                                 </li>
                             </ul>
                         </div>

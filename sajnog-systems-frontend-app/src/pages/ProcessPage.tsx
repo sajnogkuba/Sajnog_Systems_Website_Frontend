@@ -60,43 +60,46 @@ const ProcessPage: React.FC = () => {
     };
 
     return (
-        <div className="justify-center bg-primary py-12 w-screen">
-            <h2 className="mb-8 mt-12 text-center text-4xl font-bold text-white">
-                Jak wygląda współpraca?
-            </h2>
+        <div className="relative w-screen bg-[url('/images/process-bg.jpg')] bg-cover bg-center bg-no-repeat py-12">
+            <div className="absolute inset-0 bg-primary/40 z-0"/>
+            <div className="relative z-10">
+                <h2 className="mb-8 mt-12 text-center text-4xl font-bold text-white">
+                    Jak wygląda współpraca?
+                </h2>
 
-            <div className="flex flex-wrap justify-center">
-                {steps.map((step, i) => (
-                    <div
-                        key={i}
-                        onClick={() => toggleCard(i)}
-                        className="flex w-110 h-70 cursor-pointer m-4 flex-col items-center justify-center rounded-xl bg-white/90 p-4 shadow hover:outline hover:outline-4 hover:outline-accent hover:shadow-lg transition duration-500 ease-in-out shadow-lg"
-                    >
+                <div className="flex flex-wrap justify-center">
+                    {steps.map((step, i) => (
+                        <div
+                            key={i}
+                            onClick={() => toggleCard(i)}
+                            className="flex sm:w-110 2xl:w-130 2xl:h-90 sm:h-70 cursor-pointer m-4 flex-col items-center justify-center rounded-xl bg-white/90 p-4 shadow hover:outline hover:outline-4 hover:outline-accent hover:shadow-lg transition duration-1 ease-in-out shadow-lg"
+                        >
 
                             <>
                                 {step.icon}
                             </>
 
-                        <p className="mt-4 text-center text-lg font-medium text-accent">
-                            {step.title}
-                        </p>
+                            <p className="mt-4 text-center text-lg font-medium text-accent">
+                                {step.title}
+                            </p>
 
-                        <div
-                            className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                                openIndex === i ? "max-h-40 mt-4" : "max-h-0"
-                            }`}
-                        >
-                            <ul className="list-disc list-inside text-sm text-gray-700 text-left">
-                                {step.description.map((d, idx) => (
-                                    <li key={idx}>{d}</li>
-                                ))}
-                            </ul>
+                            <div
+                                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                                    openIndex === i ? "max-h-40 mt-4" : "max-h-0"
+                                }`}
+                            >
+                                <ul className="list-disc list-inside text-sm text-gray-700 text-left">
+                                    {step.description.map((d, idx) => (
+                                        <li key={idx}>{d}</li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
-    );
-};
+            </div>
+            );
+            };
 
-export default ProcessPage;
+            export default ProcessPage;

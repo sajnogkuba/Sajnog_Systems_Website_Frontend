@@ -6,10 +6,10 @@ import AboutUsPage from "./AboutUsPage";
 const MainPage = () => {
     return (
         <div className='bg-white'>
-            <section id="home" className="h-screen flex items-center justify-center">
+            <section id="home" className="flex items-center justify-center scroll-mt-30">
                 <HomePage/>
             </section>
-            <section id="about" className="h-screen flex items-center justify-center">
+            <section id="about" className="h-screen flex items-center justify-center bg-additional">
                 <AboutUsPage/>
             </section>
             <section id="process" className="flex items-start justify-center">
