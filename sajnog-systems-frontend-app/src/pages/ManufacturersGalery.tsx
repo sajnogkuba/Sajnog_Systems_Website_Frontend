@@ -7,6 +7,7 @@ const ManufacturersGalery: React.FC = () => {
         { name: "BCS", logo: "/images/logos/bcs.jpg" },
         { name: "Unv", logo: "/images/logos/unv.png" },
         { name: "Imou", logo: "/images/logos/imou.png" },
+        { name: "Bosch", logo: "/images/logos/bosch.png" },
     ];
 
 
