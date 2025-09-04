@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
                     <HashLink smooth to="/#about" className="px-3 py-2 text-white hover:text-accent">O Nas</HashLink>
                     <HashLink smooth to="/#process" className="px-3 py-2 text-white hover:text-accent">Proces</HashLink>
                     <HashLink smooth to="/#contact" className="px-3 py-2 text-white hover:text-accent">Kontakt</HashLink>
-                    <HashLink smooth to="/#contactform" className="px-3 py-2 bg-accent text-white rounded-lg hover:text-accent hover:bg-white transition-colors duration-300 ease-in-out">Umów darmową konsultację!</HashLink>
+                    <HashLink smooth to="/#contact" className="px-3 py-2 bg-accent text-white rounded-lg hover:text-accent hover:bg-white transition-colors duration-300 ease-in-out">Umów darmową konsultację!</HashLink>
                 </div>
 
                 {/* Mobile hamburger */}

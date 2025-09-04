@@ -1,4 +1,4 @@
-import {Mail, Phone, Warehouse} from "lucide-react";
+import { Mail, Phone, Warehouse } from "lucide-react";
 
 const Footer: React.FC = () => {
     return (
@@ -12,10 +12,10 @@ const Footer: React.FC = () => {
                         <div>
                             <h3 className="mb-3 text-lg font-semibold">O Nas</h3>
                             <p className="text-sm text-secondary/90">
-                                Lorem ipsum quia dolor sit porro quisquam est qui amet consectetur adipisci,
-                                sed quia duis aute irure dolor in reprehenderit dolore magna aliqua,
-                                porro quisquan est qui nisi ut aliquid ex ea commodo.
-                                Culpa quia officia deserunt mollit anim id est laborum.
+                                Sajnóg-Systems to rodzinna firma z okolic Warszawy, specjalizująca się
+                                w systemach zabezpieczeń. Projektujemy i montujemy alarmy, monitoring
+                                wizyjny oraz kontrolę dostępu – zawsze z naciskiem na rzetelność,
+                                praktyczne rozwiązania i indywidualne podejście do klienta.
                             </p>
                         </div>
                     </div>
@@ -26,16 +26,16 @@ const Footer: React.FC = () => {
                             <h3 className="mb-3 text-lg font-semibold">Sekcje</h3>
                             <ul className="list-disc pl-5 space-y-3 text-sm">
                                 <li className="hover:text-accent transition-colors duration-300 ease-in-out">
-                                    <a href="#home">Home</a>
+                                    <a href="/#home">Home</a>
                                 </li>
                                 <li className="hover:text-accent transition-colors duration-300 ease-in-out">
-                                    <a href="#about">O nas</a>
+                                    <a href="/#about">O nas</a>
                                 </li>
                                 <li className="hover:text-accent transition-colors duration-300 ease-in-out">
-                                    <a href="#process">Proces</a>
+                                    <a href="/#process">Proces</a>
                                 </li>
                                 <li className="hover:text-accent transition-colors duration-300 ease-in-out">
-                                    <a href="#contact">Kontakt</a>
+                                    <a href="/#contact">Kontakt</a>
                                 </li>
                             </ul>
                         </div>
@@ -65,15 +65,15 @@ const Footer: React.FC = () => {
                             <h3 className="mb-3 text-lg font-semibold">Kontakt</h3>
                             <ul className="space-y-3 text-sm">
                                 <li className="flex items-center gap-2">
-                                    <Mail className="h-6 w-6"/>
+                                    <Mail className="h-6 w-6" />
                                     <a href="mailto:sajnog.systems@gmail.com">sajnog.systems@gmail.com</a>
                                 </li>
                                 <li className="flex items-center gap-2">
-                                    <Phone className="h-6 w-6"/>
+                                    <Phone className="h-6 w-6" />
                                     <span>603-337-347, 697-540-093</span>
                                 </li>
                                 <li className="flex items-center gap-2">
-                                    <Warehouse className="h-6 w-6"/>
+                                    <Warehouse className="h-6 w-6" />
                                     <span>05-205 Dobczyn, pow. wołomiński</span>
                                 </li>
                             </ul>

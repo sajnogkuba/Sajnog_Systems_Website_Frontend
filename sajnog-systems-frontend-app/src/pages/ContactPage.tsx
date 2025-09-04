@@ -60,12 +60,12 @@ const ContactPage: React.FC = () => {
 
 
                 <div className="w-full max-w-2xl rounded-lg bg-white/90 p-8 shadow-lg outline-accent outline-4">
-                    <section id="contactform" className="scroll-mt-30">
-                        <h2 className="mb-4 text-left text-4xl font-bold text-accent">
-                            Umów konsultację
-                        </h2>
-                        <ContactForm/>
-                    </section>
+                   <section id="contactform" className="scroll-mt-30">
+                       <h2 className="mb-4 text-left text-4xl font-bold text-accent">
+                           Umów konsultację
+                       </h2>
+                       <ContactForm/>
+                   </section>
                 </div>
             </div>
         </div>
