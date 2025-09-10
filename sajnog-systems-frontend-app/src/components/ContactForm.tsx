@@ -255,7 +255,7 @@ const ContactForm: React.FC = () => {
                     />
                     <label htmlFor="privacyAccepted" className="text-sm text-gray-700">
                         Zapoznałem(-am) się z{" "}
-                        <a href="/privacy-policy" className="underline hover:no-underline" target="_self">
+                        <a href="/privacy" className="underline hover:no-underline" target="_self">
                             polityką prywatności
                         </a>.
                     </label>
