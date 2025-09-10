@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
                             <ul className="space-y-3 text-sm">
                                 <li className="flex items-center gap-2">
                                     <Mail className="h-6 w-6" />
-                                    <a href="mailto:sajnog.systems@gmail.com">sajnog.systems@gmail.com</a>
+                                    <a href="mailto:kontakt@sajnog-systems.pl">kontakt@sajnog-systems.pl</a>
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <Phone className="h-6 w-6" />
