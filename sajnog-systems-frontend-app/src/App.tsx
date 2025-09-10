@@ -1,6 +1,6 @@
 import './App.css'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import MainPage from "./pages/MainPage.tsx";
+import MainPage from "./pages/MainPage";
 import Layout from "./components/Layout";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 // import TestPage from "./pages/TestPage";
