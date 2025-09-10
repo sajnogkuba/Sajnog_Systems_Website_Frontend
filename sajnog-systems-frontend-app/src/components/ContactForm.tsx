@@ -15,6 +15,7 @@ const ContactForm: React.FC = () => {
         email: "",
         city: "",
         message: "",
+        privacyAccepted: false, // 👈 nowy checkbox
         botField: "", // honeypot
     });
 
@@ -29,14 +30,20 @@ const ContactForm: React.FC = () => {
         if (!/^[0-9]{9}$/.test(formData.phone)) newErrors.phone = "Podaj poprawny numer telefonu (9 cyfr)";
         if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Podaj poprawny adres email";
         if (!formData.message.trim()) newErrors.message = "Napisz, w czym możemy pomóc";
+        if (!formData.privacyAccepted) newErrors.privacyAccepted = "Musisz zaakceptować politykę prywatności";
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { id, name, value } = e.target;
-        const key = name || id;
-        setFormData((prev) => ({ ...prev, [key]: value }));
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        const { id, name, value, type, checked } = e.target as HTMLInputElement;
+        const key = (name || id) as keyof typeof formData;
+        setFormData((prev) => ({
+            ...prev,
+            [key]: type === "checkbox" ? checked : value,
+        }));
     };
 
     const resetForm = () => {
@@ -46,14 +53,14 @@ const ContactForm: React.FC = () => {
             email: "",
             city: "",
             message: "",
+            privacyAccepted: false,
             botField: "",
         });
         setErrors({});
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault(); // AJAX — bez przeładowania
-
+        e.preventDefault(); // AJAX
         if (!validate()) return;
 
         try {
@@ -66,6 +73,7 @@ const ContactForm: React.FC = () => {
                 email: formData.email,
                 city: formData.city,
                 message: formData.message,
+                privacyAccepted: formData.privacyAccepted ? "yes" : "no", // 👈 serializacja checkboxa
                 "bot-field": formData.botField,
             });
 
@@ -108,12 +116,11 @@ const ContactForm: React.FC = () => {
                 >
                     {status === "ok" ? (
                         <p className="text-sm text-gray-800">
-                            <span className="font-semibold">Dziękujemy za zainteresowanie!</span> Skontaktujemy się najszybciej jak to możliwe.
+                            <span className="font-semibold">Dziękujemy za zainteresowanie!</span>{" "}
+                            Skontaktujemy się najszybciej jak to możliwe.
                         </p>
                     ) : (
-                        <p className="text-sm text-red-700">
-                            Coś poszło nie tak. Spróbuj ponownie.
-                        </p>
+                        <p className="text-sm text-red-700">Coś poszło nie tak. Spróbuj ponownie.</p>
                     )}
                     <button
                         type="button"
@@ -133,7 +140,7 @@ const ContactForm: React.FC = () => {
                 netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
             >
-                {/* wymagane przez Netlify dla AJAX */}
+                {/* wymagane przez Netlify przy AJAX */}
                 <input type="hidden" name="form-name" value={FORM_NAME} />
 
                 {/* Honeypot */}
@@ -234,6 +241,28 @@ const ContactForm: React.FC = () => {
                     />
                     {errors.message && <p className="text-red-500 text-sm mb-2">{errors.message}</p>}
                 </div>
+
+                {/* Checkbox – Polityka prywatności */}
+                <div className="my-3 flex items-start gap-2">
+                    <input
+                        id="privacyAccepted"
+                        name="privacyAccepted"
+                        type="checkbox"
+                        checked={formData.privacyAccepted}
+                        onChange={handleChange}
+                        className="mt-1"
+                        required
+                    />
+                    <label htmlFor="privacyAccepted" className="text-sm text-gray-700">
+                        Zapoznałem(-am) się z{" "}
+                        <a href="/privacy-policy" className="underline hover:no-underline" target="_self">
+                            polityką prywatności
+                        </a>.
+                    </label>
+                </div>
+                {errors.privacyAccepted && (
+                    <p className="text-red-500 text-sm mb-2">{errors.privacyAccepted}</p>
+                )}
 
                 <button
                     type="submit"
